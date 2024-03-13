@@ -1,0 +1,20 @@
+﻿@model List<Doctor>
+
+<div class="container d-flex justify-content-around flex-wrap">
+
+    @{
+        for (int i = 0; i < Model.Count; i++)
+    {
+
+            <div class="card mb-5" style="width: 18rem;">
+            <img src="/images/doctor@(i+1).jpg" class="card-img-top" height="300px" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">@Model[i].Name</h5>
+                <p class="card-text">@Model[i].Specialization</p>
+                    <a href="/doctor/CompleteAppointment?id=@(i+1)" class="btn btn-primary">Book Appointment</a>
+            </div>
+        </div>
+    }
+    
+}
+</div>

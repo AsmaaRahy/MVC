@@ -1,0 +1,37 @@
+﻿@model Doctor
+@{<form>
+    <div class="mb-3">
+       <h2>Complete Appointment with @Model.Name</h2>
+        <label for="Name" class="form-label">Patient Name:</label>
+        <input type="text" class="form-control" id="Name" aria-describedby="emailHelp" required>
+    </div>
+    <div class="mb-3">
+        <label for="Date" class="form-label">Appointment Date:</label>
+        <input type="date" class="form-control" id="Date" required>
+    </div>
+    <div class="mb-3">
+        <label for="Time" class="form-label">Appointment Time:</label>
+        <input type="time" class="form-control" id="Time" required>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Complete Appointment</h1>
+                        <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" id="completeAppointmentButton"></button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        our appointment has been successfulF
+                        completed. Thank you!
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Complete Appointment</button>
+    
+    
+</form>
+}
